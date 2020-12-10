@@ -4,6 +4,7 @@ module.exports = {
         '!**/node_modules/**',
         '!**/tests/**',
         '!**/coverage/**',
+        '!**/.next/**',
         '!jest.config.js',
         '!babel.config.js',
     ],
@@ -16,8 +17,9 @@ module.exports = {
         },
     },
     moduleNameMapper: {
-        '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+        // '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
+        "\\.(s?css|less)$": "identity-obj-proxy"
     },
     setupFiles: [
         '<rootDir>/tests/setup.js',
